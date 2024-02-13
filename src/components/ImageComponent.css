@@ -1,0 +1,23 @@
+.image-component {
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+
+    align-items: center;
+}
+
+.image-component canvas {
+    max-width: 100%;
+    border-radius: .2rem;
+    border: 4px solid #14092e;
+    outline: 4px solid #eeffee86;
+}
+
+.image-component label {
+    border: 3px dashed #efef;
+    padding: 10px 20px;
+    cursor: pointer;
+}
