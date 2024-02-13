@@ -12,7 +12,12 @@ function FiltersComponent(props) {
             >
 
                 <Stack >
-                    <Box className='filters-box'>
+                    <Box className='filters-box'
+                        sx={{
+                            pointerEvents: props.selectedImage ? 'inherit' : 'none',
+                            opacity: props.selectedImage ? 1 : .5,
+                        }}
+                    >
                         <label htmlFor="saturate">
                             saturate
                         </label>
@@ -26,7 +31,12 @@ function FiltersComponent(props) {
                         />
                     </Box>
 
-                    <Box className='filters-box'>
+                    <Box className='filters-box'
+                        sx={{
+                            pointerEvents: props.selectedImage ? 'inherit' : 'none',
+                            opacity: props.selectedImage ? 1 : .5,
+                        }}
+                    >
                         <label htmlFor="contrast">
                             contrast
                         </label>
@@ -40,7 +50,12 @@ function FiltersComponent(props) {
                         />
                     </Box>
 
-                    <Box className='filters-box'>
+                    <Box className='filters-box'
+                        sx={{
+                            pointerEvents: props.selectedImage ? 'inherit' : 'none',
+                            opacity: props.selectedImage ? 1 : .5,
+                        }}
+                    >
                         <label htmlFor="brightness">
                             brightness
                         </label>
@@ -54,7 +69,12 @@ function FiltersComponent(props) {
                         />
                     </Box>
 
-                    <Box className='filters-box'>
+                    <Box className='filters-box'
+                        sx={{
+                            pointerEvents: props.selectedImage ? 'inherit' : 'none',
+                            opacity: props.selectedImage ? 1 : .5,
+                        }}
+                    >
                         <label htmlFor="sepia">
                             sepia
                         </label>
@@ -68,7 +88,12 @@ function FiltersComponent(props) {
                         />
                     </Box>
 
-                    <Box className='filters-box'>
+                    <Box className='filters-box'
+                        sx={{
+                            pointerEvents: props.selectedImage ? 'inherit' : 'none',
+                            opacity: props.selectedImage ? 1 : .5,
+                        }}
+                    >
                         <label htmlFor="grayscale">
                             grayscale
                         </label>
@@ -83,7 +108,12 @@ function FiltersComponent(props) {
                         />
                     </Box>
 
-                    <Box className='filters-box'>
+                    <Box className='filters-box'
+                        sx={{
+                            pointerEvents: props.selectedImage ? 'inherit' : 'none',
+                            opacity: props.selectedImage ? 1 : .5,
+                        }}
+                    >
                         <label htmlFor="blur">
                             blur
                         </label>
@@ -98,7 +128,12 @@ function FiltersComponent(props) {
                         />
                     </Box>
 
-                    <Box className='filters-box'>
+                    <Box className='filters-box'
+                        sx={{
+                            pointerEvents: props.selectedImage ? 'inherit' : 'none',
+                            opacity: props.selectedImage ? 1 : .5,
+                        }}
+                    >
                         <label htmlFor="hue-rotate">
                             hue rotate
                         </label>
@@ -115,27 +150,32 @@ function FiltersComponent(props) {
 
 
 
-                <Stack direction={'row'}
-                    justifyContent={'space-between'}
-                >
+                {
+                    props.selectedImage ? (
+                        <Stack direction={'row'}
+                            justifyContent={'space-between'}
+                        >
 
-                    <Button
-                        variant='contained'
-                        color='success'
-                        onClick={_ => props.handleDownload()}
-                    >
-                        download
-                    </Button>
+                            <Button
+                                variant='contained'
+                                color='success'
+                                onClick={_ => props.handleDownload()}
+                            >
+                                download
+                            </Button>
 
-                    <Button
-                        variant='contained'
-                        color='success'
-                        onClick={_ => props.handleResetValues()}
-                    >
-                        reset
-                    </Button>
+                            <Button
+                                variant='contained'
+                                color='success'
+                                onClick={_ => props.handleResetValues()}
+                            >
+                                reset
+                            </Button>
 
-                </Stack>
+                        </Stack>
+                    ) : null
+                }
+
 
             </Stack>
 

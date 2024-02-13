@@ -136,6 +136,7 @@ function App() {
             setHueRotate={setHueRotate}
             handleResetValues={handleResetValues}
             handleDownload={handleDownload}
+            selectedImage={selectedImage}
           />
 
         </Container>
